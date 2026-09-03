@@ -333,9 +333,10 @@
 
   <script>
     const usuarios = [
-      { id: 'est_1', nombre: 'Juan Pérez', codigo: 'EST-2026-01', rol: 'Estudiante', avatar: '🎓' },
+      { id: 'est_1', nombre: 'Lina Sanchez', codigo: 'EST-2026-01', rol: 'Estudiante', avatar: '🎓' },
       { id: 'doc_1', nombre: 'Cindy Herazo', codigo: 'DOC-1042-SR', rol: 'Docente', avatar: '👩‍🏫' },
-      { id: 'adm_1', nombre: 'Ing. Roberto Martínez', codigo: 'ADM-0001-SR', rol: 'Admin', avatar: '⚙️' }
+      { id: 'adm_1', nombre: 'Ing. Roberto Martínez', codigo: 'ADM-0001-SR', rol: 'Admin', avatar: '⚙️' },
+      { id: 'inv_1', nombre: 'Visitante Externo', codigo: 'INV-2026-99', rol: 'Invitado', avatar: '👁️' }
     ];
 
     let usuarioActivo = usuarios[1];
@@ -569,7 +570,6 @@
       btnPrev.onclick = () => { paginaActual--; filtrar(); };
       container.appendChild(btnPrev);
 
-      // Limitar botones mostrados para paginación extensa
       const maxBotones = 5;
       let inicioLoop = Math.max(1, paginaActual - 2);
       let finLoop = Math.min(totalPaginas, inicioLoop + maxBotones - 1);
